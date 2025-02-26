@@ -10,6 +10,10 @@ export default function Todo() {
         setnewTodo(""); // Clear input field after adding
     };
 
+    let deleteTask = (index) => {
+       setTodo(Todo.filter((_ ,i) => i !== index));
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-6 rounded-2xl shadow-xl w-96">
@@ -37,9 +41,15 @@ export default function Todo() {
                     {Todo.map((task, index) => (
                         <li
                             key={index}
-                            className="p-2 bg-gray-200 rounded-lg shadow-sm text-gray-800"
+                            className="p-2 bg-gray-200 rounded-lg shadow-sm text-gray-800 flex justify-between items-center"
                         >
                             {task}
+                            <button
+                                onClick={() => deleteTask(index)}
+                                className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition"
+                            >
+                                Delete
+                            </button>
                         </li>
                     ))}
                 </ul>
