@@ -1,5 +1,5 @@
 
-
+import LudoFunc from './assets/Ludo.jsx'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1></h1>
+      <LudoFunc />
     </>
   )
 }
