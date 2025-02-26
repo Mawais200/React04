@@ -2,9 +2,11 @@ import { useState } from "react"
 
 export default function LudoFunc(){
     let [Moves, setMoves] = useState({ blue: 0, yellow: 0, green: 0, red: 0 });
+    let [arr,setarr]=useState([no moves])
     let updatebtn = ()=>{
         setMoves({...Moves,blue:Moves.blue+1})
     }
+    arr.push("blue Moves")
 
     return(
 
